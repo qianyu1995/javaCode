@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/aio/Test.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/aio/client/AsyncClientHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/aio/client/Client.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/aio/client/ReadHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/aio/client/WriteHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/aio/server/AcceptHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/aio/server/ReadHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/aio/server/Server.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/bio/Client.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/bio/ServerBetter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/netty/Client.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/netty/ClientHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/netty/Server.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/netty/ServerHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/nio/Client.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/nio/ClientHandle.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/nio/Server.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/nio/ServerHandle.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/nio/Test.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/stream/FileUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/utils/BeanUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaCore/src/main/java/com/higanbana/io/utils/Calculator.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
