@@ -12,7 +12,7 @@
     <description>lucene 测试</description>
 
     <properties>
-        <lucene.version>4.10.3</lucene.version>
+        <lucene.version>8.4.0</lucene.version>
         <jdk.version>1.8</jdk.version>
     </properties>
 
