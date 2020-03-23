@@ -152,7 +152,7 @@ public class SessionCache_test
 		session.beginTransaction();
 		//------------------------------------------------
 		
-		List<User> list1 = session.createSQLQuery("select * from t_user").addEntity(User.class).list();
+		List<User> list1 = session.createSQLQuery("select * from user").addEntity(User.class).list();
 		
 		User u = (User) session.get(User.class, 1);
 		
@@ -168,7 +168,7 @@ public class SessionCache_test
 		session.beginTransaction();
 		//------------------------------------------------
 		
-		List list1 = session.createSQLQuery("select * from t_user").list();
+		List list1 = session.createSQLQuery("select * from user").list();
 		
 		User u = (User) session.get(User.class, 1);
 		

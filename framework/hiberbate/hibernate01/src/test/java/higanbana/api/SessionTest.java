@@ -35,7 +35,6 @@ public class SessionTest
 		User user = new User();
 		user.setId("2");
 		user.setName("彼岸花");
-		user.setPassword("1234");
 		session.save(user);
 		
 		//session.getTransaction().commit();
@@ -57,8 +56,8 @@ public class SessionTest
 		//2 根据配置 创建Factory
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
 		//3 通过获得操作数据库的session对象
-		org.hibernate.classic.Session session = sessionFactory.openSession();
-		User user = (User) session.get("com.higanbana.domain.User", "1");
+		Session session = sessionFactory.openSession();
+		User user = (User) session.get("com.higanbana.domain.User", "2");
 		System.out.println(user);
 		session.close();
 		sessionFactory.close();
@@ -99,7 +98,6 @@ public class SessionTest
 		//4 操作数据库
 		User user = (User) session.get(User.class, "1");
 		user.setName("tom");
-		user.setPassword("213232");
 		session.flush();
 		session.close();
 		sessionFactory.close();

@@ -35,7 +35,7 @@ public class Cretiaria_test
 		//Criteria 查询 => Hibernate独创的面向对象的查询=> 无语句
 		Criteria criteria = session.createCriteria(User.class);
 		// 查找name属性值为tom的 记录
-		criteria.add(Restrictions.eq("name", "tom"));
+		criteria.add(Restrictions.eq("name", "彼岸花"));
 		//select * from t_user;
 		// list() 将查询执行,并返回结果(多行)
 		//List<User> list =	criteria.list();
