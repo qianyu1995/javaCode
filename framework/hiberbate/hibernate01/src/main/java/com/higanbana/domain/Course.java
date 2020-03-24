@@ -1,18 +1,15 @@
 package com.higanbana.domain;
 
+import java.util.HashSet;
+import java.util.Set;
 
-/**
- * @author 陈明
- * @date 2020/1/8 16:10
- */
-
-public class Order
+public class Course
 {
 	private Integer id;
 	
 	private String name;
 	
-	private Customer customer;
+	private Set<Student> students = new HashSet<Student>();
 	
 	public Integer getId()
 	{
@@ -34,14 +31,14 @@ public class Order
 		this.name = name;
 	}
 	
-	public Customer getCustomer()
+	public Set<Student> getStudents()
 	{
-		return customer;
+		return students;
 	}
 	
-	public void setCustomer(Customer customer)
+	public void setStudents(Set<Student> students)
 	{
-		this.customer = customer;
+		this.students = students;
 	}
 	
 }

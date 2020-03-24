@@ -6,7 +6,7 @@
     package : 配置该配置文件中类所在的包.  -->
 <hibernate-mapping package="com.higanbana.domain">
 
-    <class name="Customer" table="customer">
+    <class name="Customer" table="customer" lazy="false">
         <id column="id" name="id">
             <generator class="native"></generator>
         </id>
@@ -18,6 +18,7 @@
  				   true: 在Customer 中 放弃维护外键关系
 
  			cascade :级联操作
+ 			    none: 在保持，更新或删除当前对象时，忽略其他关联的对象。它是cascade属性的默认值
  				save-update：级联保存,级联修改. 保存A时,同时保存B.
 				delete：删除A，同时删除B，AB都不存在
 				delete-orphan：孤儿删除，解除关系，同时将B删除，A存在的。
@@ -27,8 +28,8 @@
 				all-delete-orphan : 三个整合
 
  		 -->
-        <set name="orders" inverse="true">
-            <key column="cid"></key>
+        <set name="orders" lazy="true" fetch="subselect" >
+            <key column="cid" foreign-key="test"></key>
             <one-to-many class="Order"/>
         </set>
     </class>

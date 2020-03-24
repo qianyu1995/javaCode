@@ -18,6 +18,17 @@ public class Customer
 	
 	private Set<Order> orders = new HashSet<>();
 	
+	public Customer()
+	{
+	
+	}
+	
+	public Customer(Integer id,String name)
+	{
+		this.id = id;
+		this.name= name;
+	}
+	
 	public Integer getId()
 	{
 		return id;
@@ -47,8 +58,5 @@ public class Customer
 	{
 		this.orders = orders;
 	}
-	
-	
-	
 	
 }

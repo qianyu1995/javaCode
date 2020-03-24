@@ -1,18 +1,12 @@
 package com.higanbana.domain;
 
-
-/**
- * @author 陈明
- * @date 2020/1/8 16:10
- */
-
-public class Order
+public class Company
 {
 	private Integer id;
 	
 	private String name;
 	
-	private Customer customer;
+	private Address address;
 	
 	public Integer getId()
 	{
@@ -34,14 +28,22 @@ public class Order
 		this.name = name;
 	}
 	
-	public Customer getCustomer()
+	public Address getAddress()
 	{
-		return customer;
+		return address;
 	}
 	
-	public void setCustomer(Customer customer)
+	public void setAddress(Address address)
 	{
-		this.customer = customer;
+		this.address = address;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "Company [id=" + id + ", name=" + name + ", address=" + address
+				+ "]";
+	}
+	
 	
 }

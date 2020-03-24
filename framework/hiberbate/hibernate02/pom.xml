@@ -7,15 +7,10 @@
         <groupId>com.higanbana</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <packaging>jar</packaging>
-    <name>hibernate01</name>
-    <description>hibernate 基础知识</description>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.higanbana</groupId>
-    <artifactId>hibernate01</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>hibernate02</artifactId>
 
 
 </project>

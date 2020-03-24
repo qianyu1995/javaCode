@@ -13,6 +13,7 @@ import org.junit.Test;
 import java.util.List;
 
 /**
+ * 标准查询
  * @author 陈明
  * @date 2020/1/7 16:18
  */
@@ -22,19 +23,13 @@ public class Cretiaria_test
 	//Cretiaria对象 与 Query对象功能很像
 	//控制查询
 	public void equal(){
-		//1加载配置
 		Configuration conf = new Configuration().configure();
-		//2 根据Configuration 配置信息创建 SessionFactory
 		SessionFactory sf = conf.buildSessionFactory();
-		//3 获得session
 		Session session = sf.openSession();
-		//打开事务
 		Transaction ts = session.beginTransaction();
-		
-		//--------------------------------------------------------
 		//Criteria 查询 => Hibernate独创的面向对象的查询=> 无语句
 		Criteria criteria = session.createCriteria(User.class);
-		// 查找name属性值为tom的 记录
+		// 查找name属性值为彼岸花的 记录
 		criteria.add(Restrictions.eq("name", "彼岸花"));
 		//select * from t_user;
 		// list() 将查询执行,并返回结果(多行)
@@ -84,4 +79,7 @@ public class Cretiaria_test
 		session.close();
 		sf.close();
 	}
+	
+	
+	
 }
