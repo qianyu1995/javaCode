@@ -110,6 +110,7 @@ public class LazyLoadTest
 		//------------------------------------------------
 		session.getTransaction().commit();
 		session.close(); // 游离状态
+		c.getId();
 	}
 	
 	@Test

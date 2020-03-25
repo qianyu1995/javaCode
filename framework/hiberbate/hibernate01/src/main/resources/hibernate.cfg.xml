@@ -54,5 +54,7 @@
 		<mapping resource="mapper/Order.hbm.xml"/>
 		<mapping resource="mapper/Student.hbm.xml"/>
 		<mapping resource="mapper/Course.hbm.xml"/>
+		<mapping resource="mapper/Company.hbm.xml"/>
+		<mapping resource="mapper/Address.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

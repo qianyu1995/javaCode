@@ -15,6 +15,6 @@
 		fetch:
 		lazy:
 		 -->
-		<one-to-one name="address" class="Address" property-ref="company"  > </one-to-one>
+		<one-to-one name="address" class="Address"> </one-to-one>
  	</class>
  </hibernate-mapping>

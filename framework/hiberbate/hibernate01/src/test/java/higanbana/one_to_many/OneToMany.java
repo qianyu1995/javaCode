@@ -1,4 +1,4 @@
-package higanbana.onetomany;
+package higanbana.one_to_many;
 
 import com.higanbana.domain.Customer;
 import com.higanbana.domain.Order;

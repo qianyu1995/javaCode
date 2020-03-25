@@ -12,5 +12,11 @@
     <groupId>com.higanbana</groupId>
     <artifactId>hibernate02</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+    </dependencies>
 </project>

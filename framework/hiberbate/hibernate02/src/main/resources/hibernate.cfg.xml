@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hibernate-configuration xmlns="http://www.hibernate.org/xsd/hibernate-configuration">
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
     <session-factory>
         <!-- property 元素用于配置Hibernate中的属性
 			键:值
@@ -43,9 +47,29 @@
             填写src之后的路径
          -->
 
+        <!--开启二级缓存-->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <!--二级缓存提供类-->
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+        <property name="cache.provider_configuration_file_resource_path">ehcache.xml</property>
+
+
+        <!--配置文件-->
         <mapping resource="mapper/Address.hbm.xml"/>
         <mapping resource="mapper/Company.hbm.xml"/>
+        <mapping resource="mapper/Order.hbm.xml"/>
+        <mapping resource="mapper/Customer.hbm.xml"/>
 
+
+
+
+        <!-- 配置类缓存区中,缓存哪个类-->
+        <class-cache usage="read-only" class="com.higanbana.domain.Customer"/>
+        <class-cache usage="read-only" class="com.higanbana.domain.Order"/>
+        <!-- 配置类缓存区中,缓存哪个集合
+            collection: 完整类名.集合属性名
+         -->
+        <collection-cache usage="read-only" collection="com.higanbana.domain.Customer.orders"/>
 
     </session-factory>
 </hibernate-configuration>

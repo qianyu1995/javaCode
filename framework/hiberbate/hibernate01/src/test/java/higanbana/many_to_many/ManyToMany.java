@@ -1,4 +1,4 @@
-package higanbana.manytomany;
+package higanbana.many_to_many;
 
 import com.higanbana.domain.Course;
 import com.higanbana.domain.Student;
