@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.higanbana.dao.ProductDao">
+
+
+    <resultMap id="productDetail" type="com.higanbana.domain.Product">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="code" column="code"/>
+        <result property="price" column="price"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <association property="productDetail" javaType="com.higanbana.domain.ProductDetail">
+            <id property="id" column="cid"/>
+            <result property="productId" column="product_id"/>
+            <result property="productName" column="product_name"/>
+            <result property="qualityLevel" column="quality_level"/>
+            <result property="manufacturer" column="manufacturer"/>
+            <result property="createTime" column="create_time"/>
+            <result property="updateTime" column="update_time"/>
+        </association>
+    </resultMap>
+
+
+    <select id="getProductDetail" resultMap="productDetail">
+      select
+      a.*,
+      b.`id` as cid,
+      b.`product_id` ,
+      b.`product_name` ,
+      b.`quality_level` ,
+      b.`manufacturer`,
+      b.`context`,
+      b.`create_time` ,
+      b.`update_time`
+      from product a,product_detail b
+      where a.id = b.id
+    </select>
+
+
+</mapper>

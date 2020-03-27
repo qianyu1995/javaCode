@@ -5,23 +5,32 @@
 <mapper namespace="com.higanbana.dao.UserDao">
 
     <!-- 开启二级缓存，默认使用了PerpetualCache -->
-   <!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache" flushInterval="60000"/>-->
+    <!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache" flushInterval="60000"/>-->
+    <cache/>
 
     <!-- 根据用户ID查询用户信息 -->
-    <select id="findUserById" parameterType="int" resultType="User">
-		SELECT
-		* FROM USER WHERE id =#{id}
+    <select id="findUserById" parameterType="int" resultType="User" useCache="true">
+		SELECT *
+		FROM USER
+		WHERE id = #{id}
 	</select>
 
     <!-- 添加用户 -->
-    <insert id="insertUser" parameterType="User">
+    <insert id="insertUser" parameterType="User" flushCache="true">
         <selectKey keyProperty="id" resultType="int" order="AFTER">
-            SELECT
-            LAST_INSERT_ID()
+            SELECT LAST_INSERT_ID()
         </selectKey>
-
-        INSERT INTO USER
-        (username,birthday,sex,address)
-        VALUES(#{username},#{birthday},#{sex},#{address})
+        INSERT INTO
+        USER (name,birthday,sex,address)
+        VALUES(#{name},#{birthday},#{sex},#{address})
     </insert>
+
+    <!--如果传入的参数是简单数据类型，${}里面必须写value-->
+    <select id="findUsersByName" resultType="User">
+        SELECT *
+		FROM USER
+		WHERE
+	    name like "%${name}%"
+    </select>
+
 </mapper>

@@ -16,8 +16,14 @@
         <!-- 设置积极的懒加载,默认是true -->
         <setting name="aggressiveLazyLoading" value="false"/>
 
-        <!-- 二级缓存的总开关 -->
-       <!-- <setting name="cacheEnabled" value="false"/>-->
+        <!-- 二级缓存的总开关-->
+        <setting name="cacheEnabled" value="true"/>
+
+        <!--开启驼峰映射-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+        <!--设置自动映射级别 指定 MyBatis 应如何自动映射列到字段或属性。 NONE 表示关闭自动映射；PARTIAL 只会自动映射没有定义嵌套结果映射的字段。 FULL 会自动映射任何复杂的结果集（无论是否嵌套）。-->
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
     </settings>
 
 
@@ -49,10 +55,12 @@
     <!--加载映射文件-->
     <mappers>
 
-         <mapper resource="mapper/UserMapper.xml" />
-
+        <mapper resource="mapper/UserMapper.xml" />
+        <mapper resource="mapper/ProductMapper.xml"/>
+        <mapper resource="mapper/OrdersMapper.xml"/>
         <!-- 批量加载映射文件 -->
-        <!--<package name="com.higanbana.dao"/>-->
+         <!--<package name="com.higanbana.dao"/>-->
     </mappers>
+
 
 </configuration>

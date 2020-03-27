@@ -4,17 +4,31 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+
 public class User implements Serializable
 {
 	private int id;
 	
-	private String username;
+	private String username;// 用户姓名
 	
-	private String sex;
+	private String sex;// 性别
 	
-	private Date birthday;
+	private Date birthday;// 生日
 	
-	private String address;
+	private String address;// 地址
+	
+	//订单信息
+	private List<Orders> orders;
+	
+	public List<Orders> getOrders()
+	{
+		return orders;
+	}
+	
+	public void setOrders(List<Orders> orders)
+	{
+		this.orders = orders;
+	}
 	
 	public int getId()
 	{
@@ -65,4 +79,12 @@ public class User implements Serializable
 	{
 		this.address = address;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "User [id=" + id + ", username=" + username + ", sex=" + sex
+				+ ", birthday=" + birthday + ", address=" + address + "]";
+	}
+	
 }
