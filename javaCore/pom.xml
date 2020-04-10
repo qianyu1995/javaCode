@@ -32,6 +32,12 @@
             <artifactId>spring-beans</artifactId>
             <version>4.2.6.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>5.5.1</version>
+        </dependency>
     </dependencies>
 
 </project>

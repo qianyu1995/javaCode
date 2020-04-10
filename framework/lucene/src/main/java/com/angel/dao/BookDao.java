@@ -4,7 +4,7 @@ import com.angel.po.Book;
 
 import java.util.List;
 
-public interface BookDao {
-
-	public List<Book> queryBooks();
+public interface BookDao
+{
+	List<Book> queryBooks();
 }
