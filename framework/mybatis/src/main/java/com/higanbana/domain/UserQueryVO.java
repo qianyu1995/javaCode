@@ -2,14 +2,6 @@ package com.higanbana.domain;
 
 import java.util.List;
 
-/**
- * <p>Title: UserQueryVO</p>
- * <p>Description: TODO(这里用一句话描述这个类的作用) <p>
- * <p>Company: www.itcast.com</p>
- * @author 传智.关云长 
- * @date 2015-12-21 下午4:23:23  
- * @version 1.0
- */
 public class UserQueryVO {
 
 	//用户信息
