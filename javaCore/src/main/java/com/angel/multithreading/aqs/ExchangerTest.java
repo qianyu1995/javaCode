@@ -19,6 +19,7 @@ public class ExchangerTest
 			{
 				String exchange = exchanger.exchange("来自thread1的数据");
 				System.out.println("接收thread2发送的数据：" + exchange);
+				
 			} catch ( InterruptedException e )
 			{
 				e.printStackTrace();
@@ -31,15 +32,13 @@ public class ExchangerTest
 			System.out.println("thread2开始");
 			try
 			{
-				String exchange = exchanger.exchange("来自thread2的数据");
-				System.out.println("接收thread1发送的数据：" + exchange);
+				String exchange = exchanger.exchange("来自thread3的数据");
+				System.out.println("接收thread3发送的数据：" + exchange);
 			} catch ( InterruptedException e )
 			{
 				e.printStackTrace();
 			}
 			System.out.println("thread2结束");
 		} , "thread2").start();
-		
-		
 	}
 }

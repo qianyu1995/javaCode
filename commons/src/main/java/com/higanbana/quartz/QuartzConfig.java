@@ -13,7 +13,7 @@ public class QuartzConfig
 	{
 		//jobDetail
 		JobDetail jobDetail = JobBuilder
-				.newJob(HelloJob.class)
+				.newJob((Class<? extends Job>) HelloJob.class)
 				.withIdentity("helloJob","group1")
 				.build();
 		

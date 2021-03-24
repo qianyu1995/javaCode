@@ -41,11 +41,6 @@ public class Application
 				System.out.println(subject.getPrincipals());
 			}
 			
-			
-			
-			
-			
-			
 			/*//判断拥有角色：role1
 			System.out.println(subject.hasRole("role1"));;
 			System.out.println(subject.hasRole("role2"));

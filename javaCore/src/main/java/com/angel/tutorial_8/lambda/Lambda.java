@@ -10,11 +10,13 @@ public class Lambda
 	Runnable r2 = () -> System.out.println(toString());
 	
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Hello, lambda!";
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		new Lambda().r1.run();
 		new Lambda().r2.run();
 	}

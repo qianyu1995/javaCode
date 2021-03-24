@@ -18,13 +18,10 @@ public class Reflect
 		}
 		
 		Field name = user.getDeclaredField("name");
-		
 		name.setAccessible(Boolean.TRUE);
 		name.set(entity_user, "angel");
 		System.out.println(entity_user.toString());
-		
 	}
-	
 	
 }
 
