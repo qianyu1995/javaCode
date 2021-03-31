@@ -17,6 +17,7 @@ public class ThreadLocalTest
 	
 	public static void main(String[] args) throws InterruptedException
 	{
+		
 		threadLocal.remove();
 		System.out.println(threadLocal.get());
 	}
