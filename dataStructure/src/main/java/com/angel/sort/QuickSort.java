@@ -1,7 +1,5 @@
 package com.angel.sort;
 
-import com.higanbana.Application;
-
 import java.util.Arrays;
 
 /**
