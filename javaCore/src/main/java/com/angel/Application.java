@@ -12,6 +12,8 @@ public class Application
 	public static void main(String[] args) throws InterruptedException, ExecutionException
 	{
 		System.out.println(DateUtil.now());
+		
+		System.out.println("hello");
 	}
 	
 	
