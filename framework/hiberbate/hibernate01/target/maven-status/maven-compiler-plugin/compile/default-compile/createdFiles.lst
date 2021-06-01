@@ -1,0 +1,9 @@
+com\higanbana\domain\Address.class
+com\higanbana\domain\Customer.class
+com\higanbana\domain\Company.class
+com\higanbana\util\HibernateUtils$1.class
+com\higanbana\domain\Student.class
+com\higanbana\domain\Order.class
+com\higanbana\domain\Course.class
+com\higanbana\domain\User.class
+com\higanbana\util\HibernateUtils.class

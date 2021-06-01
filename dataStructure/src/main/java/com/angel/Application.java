@@ -1,16 +1,10 @@
 package com.angel;
 
 
-import cn.hutool.core.collection.CollUtil;
-import cn.hutool.core.date.DateUtil;
-import cn.hutool.poi.excel.BigExcelWriter;
-import cn.hutool.poi.excel.ExcelUtil;
-
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.function.Function;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * @author 陈明
@@ -18,12 +12,9 @@ import java.util.function.Function;
  */
 public class Application
 {
+
 	
-	
-	public static void main(String[] args)
-	{
-	
-	}
-	
-	
+
 }
+
+

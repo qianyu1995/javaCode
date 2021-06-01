@@ -1,0 +1,5 @@
+com\angel\first\IndexManager.class
+com\angel\po\Book.class
+com\angel\dao\BookDao.class
+com\angel\dao\BookDaoImpl.class
+com\angel\first\IndexSearch.class

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.higanbana.domain" >
+ 	<class name="Address" table="address"   >
+		<id name="id" column="id"    >
+		<!-- foreign: 该主键既是主键又是外键 -->
+			<generator class="foreign">
+			<!-- 作为外键时引用哪个属性 -->
+				<param name="property">company</param>
+			</generator>
+		</id> 
+			
+		<property name="name" column="name" type="string" ></property>
+		<!-- 配置一对一关系 -->
+		<!--由于在申明主键的时候已经将关系写清楚了，所以在这里没有column这个属性。按平常的习惯，我们会在这里写上column="数据库中外键字段属性名称。"-->
+		<!--constrained属性：就是表明我们的主键当外键使用了。 这个属性两个作用，一是通知这种对应关系在上面已经写过了，所以这里才不需要写column，二是表明这种关系是什么，也就是主键当外键。-->
+		<one-to-one name="company" class="Company" constrained="true"/>
+ 	</class>
+ </hibernate-mapping>

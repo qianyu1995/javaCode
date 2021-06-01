@@ -1,5 +1,7 @@
 package com.angel;
 
+import cn.hutool.core.date.DateUtil;
+import java.util.concurrent.ExecutionException;
 
 /**
  * @author 陈明
@@ -7,22 +9,13 @@ package com.angel;
  */
 public class Application
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws InterruptedException, ExecutionException
 	{
-		Application application = new Application();
-		application.say();
+		System.out.println(DateUtil.now());
 	}
 	
 	
-	public void say()
-	{
-		try
-		{
-			int a = 10;
-		} catch ( Exception e )
-		{
-			e.printStackTrace();
-			throw e;
-		}
-	}
 }
+
+
+

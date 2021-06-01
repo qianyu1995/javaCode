@@ -144,7 +144,7 @@
         <!-- 用户信息（一对一） -->
         <!-- select：指定关联查询的查询statement（即查询用户的statement的id），然后将查询结果，封装到property属性指定的变量中 -->
         <!-- column：通过column指定的列所查询出的结果，作为select指的statement的入参 -->
-        <!-- 注意：如果select指定的statement，入参需要多个值，需要在column中{col1=prop1,col2=prop2} -->
+        <!-- 注意：如果select指定的statement，入参需要多个值，需要在column中{prop1=col1,prop2=col2} -->
         <association property="user"
                      select="com.higanbana.dao.UserDao.findUserById" column="user_id"></association>
     </resultMap>
